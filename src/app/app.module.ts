@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { PostCreateComponent} from './posts/post-create/post-create.component'; // we omit the '.ts' for imports
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostCreateComponent
   ],
   imports: [
     BrowserModule,
