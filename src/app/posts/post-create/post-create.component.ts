@@ -8,5 +8,9 @@ import { Component } from '@angular/core'; // component decorator must be import
     templateUrl: './post-create.component.html'
 })
 export class PostCreateComponent {
-    // nothing needs to be added here
+  newPost = 'NO CONTENT';
+
+  onAddPost(postInput: HTMLTextAreaElement) {
+    this.newPost = postInput.value; // console.dir(postInput); // to inspect
+  }
 }
