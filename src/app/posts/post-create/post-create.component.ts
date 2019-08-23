@@ -5,7 +5,8 @@ import { Component } from '@angular/core'; // component decorator must be import
 // selectors allow us to use components (this will become the tag)
 @Component({
     selector: 'app-post-create',
-    templateUrl: './post-create.component.html'
+    templateUrl: './post-create.component.html',
+    styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent {
   enteredValue = '';
