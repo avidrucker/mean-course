@@ -1,7 +1,8 @@
 const http = require('http');
+const app = require('./backend/app');
 
-// req == request, res == response
-const server = http.createServer((req, res) => {
-  res.end('This is my first response.');
-});
-server.listen(process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
+app.set('port',port); // tell Express which port to use
+const server = http.createServer(app); // use app as a listener for incoming requests
+
+server.listen(port); //start the listener
